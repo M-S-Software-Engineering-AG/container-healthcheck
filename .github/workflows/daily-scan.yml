@@ -1,0 +1,11 @@
+name: Daily scan
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+      timezone: Europe/Zurich
+  workflow_dispatch:
+
+jobs:
+  scan:
+    uses: M-S-Software-Engineering-AG/ci-workflows/.github/workflows/go-daily-scan.yml@main
